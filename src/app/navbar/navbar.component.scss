@@ -1,0 +1,60 @@
+$primary: rgb(115, 212, 250);
+
+body {
+    margin: 0;
+    font-family: 'Nunito', 'sans-serif';
+    font-size: 18px;
+
+    // in "header" in the tutorial. We put the navbar on its own component so we can make it more global
+    background: $primary;
+    padding: 1em 0;
+}
+
+.container {
+    background-color: $primary;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+a.logo {
+    font-weight: bold;
+}
+
+nav {
+    // float: right;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+
+        li {
+            width: 18%;
+        }
+
+        li:last-child {
+            margin-left: auto;
+            margin-right: 0;
+        }   // https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements
+
+        li a {
+            padding: 1em;
+
+            &:hover {
+                background: darken($primary, 10%);
+            }
+        }
+    }
+}
+
+
+h1 {
+    margin-top: 2em;
+}

@@ -1,0 +1,17 @@
+
+// some code found at https://mdbootstrap.com/ working as intended. Goal was to setup a global backfround.
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("./assets/images/background.png");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

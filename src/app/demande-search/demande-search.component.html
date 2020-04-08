@@ -1,0 +1,45 @@
+<div *ngIf="!showForm">
+    <div class="jumbotron">
+        <p>DEMANDES</p>
+        <p>Ici le formulaire de recherche</p>
+        <button (click)="toggleShowForm()">Nouvelle demande</button>
+    </div>
+    
+    <div class="jumbotron">
+        <p>Ici les résultats de la recherche</p>
+    </div>
+    
+</div>
+<!-- <app-demande-form *ngIf="showForm"></app-demande-form> -->
+
+<div *ngIf="showForm">
+    <div class="jumbotron">
+        <h6>AJOUTER UNE DEMANDE</h6>
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+            
+                <div class="col-8">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="inputName">IDRH</label>
+                            <div class='float-right smalltext text-muted' *ngIf="!isFieldInvalid('nom')">
+                              Champ obligatoire
+                            </div>
+                            <div class='float-right missing-field smalltext' *ngIf="isFieldInvalid('nom')">
+                              Veuillez renseigner l'IDRH de l'agent concerné
+                            </div>
+                            <input type="text" class="form-control" id="inputIDRH" placeholder="IDRH" formControlName="idrh">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+
+        <button (click)="toggleShowForm()">Retour à la recherche</button>
+    </div>  
+</div>
+
+
+

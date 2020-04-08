@@ -1,0 +1,13 @@
+<div class="container">
+    <nav>
+        <ul>
+            <li><a routerLink="/demandes">Demandes</a></li>
+            <li><a routerLink="/agents">Agents</a></li>
+            <li *ngIf="isUserAdmin()"><a routerLink="/gestionnaires">Gestionnaires</a></li>
+            <li *ngIf="isUserAdmin()"><a routerLink="/reportings">Reportings</a></li>
+            <li><button class="float-right">Outils</button></li>
+        </ul>        
+    </nav>
+</div>
+
+
